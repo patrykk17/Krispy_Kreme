@@ -24,7 +24,7 @@ const Register = () => {
       const data = await res.json();
       if (data.success) {
         alert('Registration successful');
-        router.push('/login');
+        router.push('/');
       } else {
         setErrorMessage(data.message || 'Registration failed');
       }

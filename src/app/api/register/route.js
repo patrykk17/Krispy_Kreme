@@ -18,7 +18,6 @@ export async function POST(req) {
       return NextResponse.json({ success: false, message: 'User already exists.' });
     }
 
-    // Insert the new user with username set to email and default acctype as 'Customer'
     const result = await collection.insertOne({
       username: email, // Save email as username
       pass: password,
